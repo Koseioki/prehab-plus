@@ -1,0 +1,22 @@
+.notebook{
+        border-radius: 0.25rem;
+
+
+}
+
+.notebook-paper {
+    background-color: var(--white);
+    padding: 1rem;
+    
+}
+
+.notebook-rings {
+    margin: 2rem 0 0 0;
+    padding: 0rem;
+    background-image: url('../assets/notebook-rings.svg');
+    height: 2.75rem;
+    background-repeat: repeat-x;
+    /* background-color: var(--white); */
+  
+
+}
