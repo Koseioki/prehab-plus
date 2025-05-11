@@ -1,6 +1,7 @@
 import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Todo from './Todo'
+import { Routes, Route } from 'react-router-dom'
 import Skema from './Skema'
 
 const App = () =>{
