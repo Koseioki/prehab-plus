@@ -50,7 +50,4 @@ jobs:
                 path: ./dist
             - name: Deploy to GitHub Pages
               id: deployment
-              uses: actions/deploy-pages@v1
-              with:
-                # Ensure this is properly pointing to the correct artifact
-                artifact-name: github-pages
+              uses: actions/deploy-pages@v1  # No need for 'artifact-name'
