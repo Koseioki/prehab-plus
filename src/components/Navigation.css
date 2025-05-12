@@ -3,6 +3,8 @@
   padding: 1rem;
   font-size: 0.75rem;
   box-shadow: var(--shadow);
+      /* max-width: 50rem; */
+
 
 }
 
@@ -14,6 +16,7 @@
     flex-wrap: wrap;
     column-gap: 1.5rem;
     justify-content: center;
+    
 }
 
 .main-navigation a{
@@ -25,7 +28,7 @@
 }
 
 .main-navigation a:hover {
-    font-weight: bold;
+    /* font-weight: bold; */
     text-decoration: underline;
 }
 

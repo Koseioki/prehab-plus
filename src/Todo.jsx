@@ -1,4 +1,4 @@
-import Navigation from './components/Navigation';
+// import Navigation from './components/Navigation';
 import Notebook from './components/Notebook';
 
 function Todo() {
@@ -9,14 +9,14 @@ function Todo() {
   const danishDate = date.toLocaleDateString('da-DK', options);
   console.log(danishDate);
   return (
-    <>
-    <Navigation />
+    <div id="main-content">
+    {/* <Navigation /> */}
     <Notebook>
     <h1>Min to-do liste</h1>
     <p>{danishDate}</p>
     </Notebook>
 
-    </>
+    </div>
   );
 }
 

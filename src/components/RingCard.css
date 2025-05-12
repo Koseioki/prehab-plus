@@ -1,0 +1,18 @@
+.ringcard{
+        border-radius: 0.25rem;
+        margin: 1rem;
+}
+
+.ringcard-paper {
+    background-color: var(--white);
+    padding: 1rem;
+    position: relative;
+    
+}
+
+.ringcard-ring {
+    position: absolute;
+    top: -1.25rem;
+    left: 0;
+  
+}

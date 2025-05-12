@@ -1,9 +1,10 @@
+import Notebook from './components/Notebook';
 function Skema () {
     return (
-        <div className="skema">
-            <h1>Skema</h1>
-            <p>Her er dit skema.</p>
-        </div>
+      <Notebook>
+    <h1>Mit skema</h1>
+    </Notebook>
+
     );
 }
 export default Skema;

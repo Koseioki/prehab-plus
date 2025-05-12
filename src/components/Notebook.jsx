@@ -4,7 +4,7 @@ import './Notebook.css';
 function Notebook({children}) {
   return (
     <div className="notebook">
-        <div class="notebook-rings"/>
+        <div className="notebook-rings"/>
         <div className="notebook-paper">
             <div className="content-width">
         {children}
