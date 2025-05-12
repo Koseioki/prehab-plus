@@ -39,13 +39,18 @@ jobs:
               run: npm install
             - name: Build
               run: npm run build && cp ./dist/index.html ./dist/404.html
+            - name: List contents of dist folder
+              run: ls -alh ./dist  # Confirm contents before uploading
             - name: Setup Pages
               uses: actions/configure-pages@v3
             - name: Upload dist folder
               uses: actions/upload-artifact@v4
               with:
-                name: github-pages
+                name: github-pages  # Ensure this name matches in the deploy step
                 path: ./dist
             - name: Deploy to GitHub Pages
               id: deployment
               uses: actions/deploy-pages@v1
+              with:
+                # Ensure this is properly pointing to the correct artifact
+                artifact-name: github-pages
