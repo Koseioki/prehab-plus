@@ -1,5 +1,7 @@
 // import Navigation from './components/Navigation';
 import Notebook from './components/Notebook';
+import TodoComponent from './components/TodoComponent';
+
 
 function Todo() {
 
@@ -14,6 +16,17 @@ function Todo() {
     <Notebook>
     <h1>Min to-do liste</h1>
     <p>{danishDate}</p>
+    <h2>Hjemmetræning</h2>
+    <hr/>
+    <ul>
+    <TodoComponent
+    title="Armløft med rotation"
+    duration="10" />
+        <TodoComponent
+    title="Armløft med rotation"
+    duration="10" />
+
+    </ul>
     </Notebook>
 
     </div>
