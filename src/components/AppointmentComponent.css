@@ -1,0 +1,53 @@
+.appointment-component-wrapper {
+        display: flex;
+    flex-direction:row;
+    justify-content: flex-start;
+    align-items:flex-start;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.appointment-component-wrapper dd {
+margin: 0;
+}
+
+.appointment-text-and-button{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 0 1rem;
+}
+
+
+.tearoff-calendar {
+    border: 0.0625rem solid var(--black);
+    border-radius: 0.25rem;
+    display: block;
+    width: 3.75rem;
+    /* height: 4.5rem; */
+}
+
+.tearoff-calendar p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+.tearoff-calendar p:first-child {
+    background: var(--light-pink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.25rem;
+}
+
+.tearoff-calendar p:last-child {
+    font-weight: bold;
+    height: 2.25rem;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}

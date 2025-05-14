@@ -6,8 +6,14 @@ import Hjaelp from '../assets/hjaelp.svg';
 import { NavLink } from 'react-router-dom';
 
 function Navigation() {
-    return (
+    return (<>
+        <a href="#main-content">
+            Skip to content
+        </a>
         <nav className="main-navigation">
+            <NavLink to="/">
+            Prehab plus
+            </NavLink>
             <ul>
                 <li>
                     
@@ -36,7 +42,9 @@ function Navigation() {
                 </li>
             </ul>
         </nav>
+           </>
     );
+ 
 }
 
 export default Navigation;

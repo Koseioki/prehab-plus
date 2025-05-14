@@ -12,13 +12,12 @@ function Todo() {
   console.log(danishDate);
   return (
     <div id="main-content">
-    {/* <Navigation /> */}
     <Notebook>
     <h1>Min to-do liste</h1>
     <p>{danishDate}</p>
     <h2>Hjemmetræning</h2>
-    <hr/>
-    <ul>
+    <hr aria-hidden="true"/>
+    <ul className="ul-no-style">
     <TodoComponent
     title="Armløft med rotation"
     duration="10" />

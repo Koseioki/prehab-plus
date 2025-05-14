@@ -1,7 +1,7 @@
 .todo-component-wrapper{
     display: flex;
-    flex-direction:row-reverse;
-    justify-content: flex-end;
+    flex-direction:row;
+    justify-content: flex-start;
     align-items:flex-start;
     gap: 1rem;
     margin: 2rem 0;
@@ -16,3 +16,29 @@
     /* margin: 0; */
 
 }
+
+.todo-text-and-button{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 0 1rem;
+}
+
+.todo-text-and-button div:has(.button){
+    /* border: 2px blue solid;
+    width: 100%; */
+    /* display: flex;
+    min-width: 10rem; */
+}
+
+.todo-text-and-button .button{
+    /* width: 100%; */
+    /* min-width: 10rem; */
+    /* max-width: 10rem; */
+    /* flex-grow: 1; */
+    /* flex-basis: 0; */
+    /* flex-shrink: 0; */
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+}
+

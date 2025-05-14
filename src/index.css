@@ -19,6 +19,9 @@
   --focus: 0 0 0 0.25rem var(--white), 0 0 0 0.5rem var(--dark-blue);
   --shadow: 0 0 1rem rgba(0, 0, 0, 0.25);
 
+  /* box-sizing:content-box; */
+
+
 }
 
 html,
@@ -54,14 +57,15 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0;
+  margin: 0.5rem 0;
 }
 
 p{
-  margin: 0;
+  margin: 0.5rem 0;
 }
 
-a:focus{
+a:focus,
+button:focus {
   outline: none;
   box-shadow: var(--focus);
 }
@@ -76,8 +80,8 @@ a:focus{
   text-decoration: none;
   color: var(--black);
   border-radius: 0.5rem;
-  width: 100%;
-  transition: all 0.1s ease-in-out;
+  /* width: 100%; */
+  /* transition: all 0.1s ease-in-out; */
 
 
 }
@@ -86,20 +90,25 @@ a:focus{
  {
   box-shadow: none;
   transform: translateY(0.5rem);
-  transition: all 0.1s ease-in-out;
+  /* transition: all 0.1s ease-in-out; */
 
 
 }
 .button:focus{
       box-shadow: var(--focus);
         transform: translateY(0.5rem);
-  transition: all 0.1s ease-in-out;
+  /* transition: all 0.1s ease-in-out; */
 
 }
 
 .button-blue {
   background-color: var(--light-blue);
   box-shadow: 0 0.5rem 0 var(--dark-blue);
+}
+
+.button-pink {
+  background-color: var(--light-pink);
+  box-shadow: 0 0.5rem 0 var(--dark-pink);
 }
 
 .text-icon{
@@ -120,4 +129,10 @@ hr {
   /* color: var(--dark-grey); */
   /* border: none; */
   box-shadow: none;
+}
+
+.ul-no-style {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
