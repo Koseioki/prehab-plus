@@ -19,7 +19,7 @@
   --focus: 0 0 0 0.25rem var(--white), 0 0 0 0.5rem var(--dark-blue);
   --shadow: 0 0 1rem rgba(0, 0, 0, 0.25);
 
-  /* box-sizing:content-box; */
+  box-sizing: border-box;
 
 
 }
@@ -31,6 +31,8 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: var(--black);
   background-color: var(--beige);
+    box-sizing: border-box;
+
   /* max-width: 40rem; */
   /* margin: 0 auto; */
 }
@@ -80,6 +82,9 @@ button:focus {
   text-decoration: none;
   color: var(--black);
   border-radius: 0.5rem;
+  /* margin-bottom: 0.5rem; */
+    box-sizing: border-box;
+
   /* width: 100%; */
   /* transition: all 0.1s ease-in-out; */
 
@@ -109,6 +114,11 @@ button:focus {
 .button-pink {
   background-color: var(--light-pink);
   box-shadow: 0 0.5rem 0 var(--dark-pink);
+}
+
+.button-yellow {
+  background-color: var(--light-yellow);
+  box-shadow: 0 0.5rem 0 var(--dark-yellow);
 }
 
 .text-icon{

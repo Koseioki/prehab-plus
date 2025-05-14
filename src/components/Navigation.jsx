@@ -8,7 +8,7 @@ import { NavLink } from 'react-router-dom';
 function Navigation() {
     return (<>
         <a href="#main-content">
-            Skip to content
+            Videre til indhold
         </a>
         <nav className="main-navigation">
             <NavLink to="/">

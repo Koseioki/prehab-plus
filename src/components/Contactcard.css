@@ -1,0 +1,23 @@
+.contact-card .thumbnail{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    border: 0.0625rem solid var(--dark-yellow);
+    /* margin-right: 10px; */
+    object-fit: cover;
+}
+
+.contact-card-header{
+    display: flex;
+    /* flex-wrap: wrap; */
+    align-items: flex-start;
+    gap: 1rem;
+    /* margin-bottom: 0.5rem; */
+}
+
+.contact-card li{
+margin-bottom: 1rem;
+}
+.contact-card .button{
+width: 100%;
+}
