@@ -33,7 +33,7 @@ function Todo() {
   }, []);
 
   return (
-    <div id="main-content">
+    <div id="main-content" className="content-width">
 
 
       <Notebook>

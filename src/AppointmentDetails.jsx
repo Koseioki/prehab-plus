@@ -25,7 +25,7 @@ function AppointmentDetails() {
     }, [appointmentId]);
 
     return (
-        <div id="main-content">
+        <div id="main-content" className="content-width">
             <Notebook>
                 <BackButton />
                 <AppointmentComponent appointment={appointment} />

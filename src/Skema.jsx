@@ -28,7 +28,7 @@ function Skema() {
   return (
 
 
-    <div id="main-content">
+    <div id="main-content" className="content-width">
 
 
 
@@ -44,6 +44,12 @@ function Skema() {
               appointment={appointment} />
           ))}    </ul>
       </Notebook>
+
+
+
+
+
+
     </div>
   );
 }
