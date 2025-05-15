@@ -6,18 +6,18 @@ import CheckboxChecked from '../assets/checkbox-checked.svg';
 import Training from '../assets/training.svg';
 import Time from '../assets/time.svg';
 
-function TodoComponent({ title, duration }) {
+
+function TodoComponent({ exercise }) {
   const [checked, setChecked] = useState(false);
+
 
   return (
     <>
 
-
-
       <li className="todo-component-wrapper">
 
         {/* title for screen readers */}
-        <h3 className="sr-only">{title}</h3>
+        <h3 className="sr-only">{exercise.title}</h3>
 
 
         {/* check box */}
@@ -30,8 +30,8 @@ function TodoComponent({ title, duration }) {
             <img src={checked ? CheckboxChecked : Checkbox} alt="" />
             <span className="sr-only">
               {checked
-                ? `Markeret: ${title} er udført`
-                : `Marker ${title} som udført`}
+                ? `Markeret: ${exercise.title} er udført`
+                : `Marker ${exercise.title} som udført`}
             </span>
           </button>
         </div>
@@ -41,16 +41,24 @@ function TodoComponent({ title, duration }) {
           {/* visual title */}
           <div>
             <h3 aria-hidden="true" className="align-text-icon">
-              <img src={Training} alt="" className="text-icon" />{title}
+              <img src={Training} alt="" className="text-icon" />
+              {exercise.title}
             </h3>
             <p className="align-text-icon">
-              <img src={Time} alt="" className="text-icon" />{duration} minutter
+              <img src={Time} alt="" className="text-icon" />
+              {exercise.duration} minutter
             </p>
           </div>
           <div>
-          <NavLink to="/" className="button button-blue">
-            <span aria-label={`Se vejledning af ${title}`}>Se vejledning</span>
-          </NavLink>
+            {/* button to exercise tutorial */}
+            <NavLink
+              to={`/${exercise.id}`}
+              className="button button-blue"
+              aria-label={`Se vejledning af ${exercise.title}`}>
+              <span aria-label={`Se vejledning af ${exercise.title}`}>
+                Se vejledning
+              </span>
+            </NavLink>
           </div>
         </div>
 
