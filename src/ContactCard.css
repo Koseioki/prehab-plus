@@ -9,10 +9,8 @@
 
 .contact-card-header{
     display: flex;
-    /* flex-wrap: wrap; */
     align-items: flex-start;
     gap: 1rem;
-    /* margin-bottom: 0.5rem; */
 }
 
 .contact-card li{

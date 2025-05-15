@@ -7,7 +7,7 @@ import Video from '../assets/video.svg';
 
 function ContactCard() {
     return (
-
+// card
         <RingCard>
             <div className="contact-card">
                 <div className="contact-card-header">
