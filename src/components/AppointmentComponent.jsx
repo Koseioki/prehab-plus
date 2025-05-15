@@ -3,10 +3,11 @@ import Drop from "../assets/drop.svg";
 import Time from "../assets/time.svg";
 import Location from "../assets/location.svg";
 import "./AppointmentComponent.css";
-function AppointmentComponent() {
+function AppointmentComponent({appointment}) {
   return (
     <>
       <li className="appointment-component-wrapper">
+
 
 
         <div className="tearoff-calendar" aria-hidden="true">
@@ -17,7 +18,7 @@ function AppointmentComponent() {
           <div>
             <h3 className="align-text-icon">
               <img src={Drop} alt="" className="text-icon" />
-              Jern i drop
+              {appointment.title}
               <span className="sr-only">Den femte Maj</span>
             </h3>
 
@@ -32,14 +33,17 @@ function AppointmentComponent() {
               <dt className="sr-only">Sted</dt>
               <dd className="align-text-icon">
                 <img src={Location} alt="" className="text-icon" />
-                Holbæk Sygehus
+                {appointment.location}
               </dd>
 
 
             </dl>
           </div>
           <div>
-            <NavLink className="button button-pink" to="/skema" aria-label="Det sker til jern i drop">
+            <NavLink
+            to={`/skema/${appointment.id}`}
+            className="button button-pink"
+            aria-label={`Det sker til ${appointment.title}`}>
               Det sker til aftalen
             </NavLink>
           </div>

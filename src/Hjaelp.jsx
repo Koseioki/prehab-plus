@@ -1,3 +1,4 @@
+import ContactCard from './components/ContactCard';
 import RingCard from './components/RingCard';
 function Hjaelp() {
     return (
@@ -6,8 +7,7 @@ function Hjaelp() {
             <p>Vi arbejder på at samle de mest stillede spørgsmål og svar her.
             </p>
             <p>Har du brug for hjælp nu, kan du kontakte os her.</p>
-            <RingCard>
-            </RingCard>
+            <ContactCard />
         </div>
 
 

@@ -8,20 +8,21 @@ import BackButton from './components/BackButton';
 function ExerciseTutorial() {
 
     // import the exercise id from the url
-    const { id } = useParams();
+    const { exerciseId } = useParams();
     // get the exercise from the firebase database
     const [exercise, setExercise] = useState({});
     useEffect(() => {
         async function getExercise() {
-            const url = `https://prehab-plus-default-rtdb.firebaseio.com/exercises/${id}.json`;
+            const url = `https://prehab-plus-default-rtdb.firebaseio.com/exercises/${exerciseId}.json`;
             const response = await fetch(url);
             const data = await response.json();
+            data.id = exerciseId;
             setExercise(data);
             console.log(data.tutorial);
 
         }
         getExercise();
-    }, [id]);
+    }, [exerciseId]);
 
 
     return (

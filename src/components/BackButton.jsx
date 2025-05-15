@@ -1,14 +1,19 @@
-import { NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import './BackButton.css';
 import Back from '../assets/back.svg';
 
 function BackButton() {
+  const navigate = useNavigate();
+
   return (
-    // return to the previous page using NavLink
-    <NavLink to="/" className="back-button align-text-icon">
-        <img src={Back} alt="" className="text-icon" />
-    Tilbage
-    </NavLink>
+    <button
+      className="back-button align-text-icon"
+      onClick={() => navigate(-1)}
+      // type="button"
+    >
+      <img src={Back} alt="" className="text-icon" />
+      Tilbage
+    </button>
   );
 }
 

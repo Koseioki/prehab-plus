@@ -3,8 +3,9 @@
     background-color: var(--white);
     border-radius: 0.25rem;
     border: 0.0625rem solid var(--black);
+    font-size: 1rem;
 }
-a.back-button{
+/* button.back-button{
     text-decoration: none;
     color: var(--black);
-}
+} */

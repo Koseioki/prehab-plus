@@ -7,6 +7,7 @@ import Kontakt from './Kontakt'
 import Hjaelp from './Hjaelp'
 import Navigation from './components/Navigation'
 import ExerciseTutorial from './ExerciseTutorial'
+import AppointmentDetails from './AppointmentDetails'
 
 const App = () =>{
 
@@ -17,8 +18,9 @@ const App = () =>{
     <Routes>
       <Route path="/" element={<Todo />} />
       {/* each exercise page */}
-      <Route path="/:id" element={<ExerciseTutorial />} />
+      <Route path="/:exerciseId" element={<ExerciseTutorial />} />
       <Route path="/skema" element={<Skema />} />
+      <Route path="/skema/:appointmentId" element={<AppointmentDetails />} />
       <Route path="/kontakt" element={<Kontakt />} />
       <Route path="/hjaelp" element={<Hjaelp />} />
     </Routes>
