@@ -1,11 +1,26 @@
+.skip-link {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+
+.skip-link:focus {
+    top: 0.5rem;
+    left: 0.5rem;
+    z-index: 1000;
+    background-color: var(--dark-blue);
+    color: var(--white);
+    padding: 1rem;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
 .main-navigation {
   background-color: var(--white);
   padding: 1rem;
   font-size: 0.75rem;
   box-shadow: var(--shadow);
       /* max-width: 50rem; */
-
-
 }
 
 .main-navigation ul {

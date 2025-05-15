@@ -1,0 +1,10 @@
+.back-button{
+    padding: 1rem;
+    background-color: var(--white);
+    border-radius: 0.25rem;
+    border: 0.0625rem solid var(--black);
+}
+a.back-button{
+    text-decoration: none;
+    color: var(--black);
+}

@@ -7,13 +7,13 @@ import { NavLink } from 'react-router-dom';
 
 function Navigation() {
     return (<>
-        <a href="#main-content">
+        <a href="#main-content" className="skip-link">
             Videre til indhold
         </a>
         <nav className="main-navigation">
-            <NavLink to="/">
+            {/* <NavLink to="/" className="sr-only">
             Prehab plus
-            </NavLink>
+            </NavLink> */}
             <ul>
                 <li>
                     

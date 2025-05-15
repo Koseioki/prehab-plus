@@ -1,6 +1,9 @@
 
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+// import './ExerciseTutorial.css';
+import Notebook  from './components/Notebook';
+import BackButton from './components/BackButton';
 
 function ExerciseTutorial() {
 
@@ -14,19 +17,36 @@ function ExerciseTutorial() {
             const response = await fetch(url);
             const data = await response.json();
             setExercise(data);
-            console.log(data);
+            console.log(data.tutorial);
+
         }
         getExercise();
     }, [id]);
-  return (
-    <div>
-        {/* title of the exercise */}
-        {/* <h1>{exercise.title}</h1> */}
-        
-      <h1>Exercise Tutorial</h1>
-      <p>This is a tutorial for the exercise.</p>
-    </div>
-  );
+
+
+    return (
+        <div id="main-content">
+
+            <Notebook>
+            {/* title of the exercise */}
+            <BackButton />
+            <h1>{exercise.title}</h1>
+            <h2>Video</h2>
+
+            <div>Video here</div>
+
+            <h2>Sådan gør du:</h2>
+            {/* the first element of exercise.tutorial */}
+       
+            <ol>
+                {exercise.tutorial && exercise.tutorial.slice(0).map((step, index) => (
+                    <li key={index}>{step}</li>
+                ))}
+            </ol>
+</Notebook>
+        </div>
+
+    );
 }
 
 export default ExerciseTutorial;

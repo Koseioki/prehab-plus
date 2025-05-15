@@ -19,7 +19,7 @@
   --focus: 0 0 0 0.25rem var(--white), 0 0 0 0.5rem var(--dark-blue);
   --shadow: 0 0 1rem rgba(0, 0, 0, 0.25);
 
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
 
 
 }
@@ -31,10 +31,8 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: var(--black);
   background-color: var(--beige);
-    box-sizing: border-box;
+  box-sizing: border-box;
 
-  /* max-width: 40rem; */
-  /* margin: 0 auto; */
 }
 
 .sr-only {
@@ -130,6 +128,7 @@ button:focus {
 .align-text-icon{
   display: flex;
   align-items: center;
+  /* justify-content: center; */
 }
 
 hr {
