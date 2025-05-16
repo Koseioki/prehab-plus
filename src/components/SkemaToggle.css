@@ -4,25 +4,29 @@
     border-radius: 0.25rem;
     display: inline-flex;
     align-items: center;
+    box-shadow: none;
+    border: none;
+    cursor: pointer;
 }
 
-.skema-toggle button {
+.tab-label-off {
     background-color: var(--dark-pink);
     color: var(--white);
-        border: none;
+    border: none;
     border-radius: 0.25rem;
     padding: 1rem;
     font-size: 1rem;
-    cursor: pointer;
-    
+
+
 }
 
-.skema-toggle button[aria-selected="true"] {
+.tab-label-on {
     background-color: var(--white);
     color: var(--dark-pink);
     font-weight: bold;
+    border-radius: 0.25rem;
 
-    /* box-shadow: var(--shadow); */
     font-size: 1rem;
-}
+    padding: 1rem;
 
+}
