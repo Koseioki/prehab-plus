@@ -7,7 +7,7 @@ function SkemaToggle() {
     return (
         <>
             <h2 id="tablist-1">title</h2>
-            <div role="tablist" aria-labelledby="tablist-1">
+            <div role="tablist" aria-labelledby="tablist-1" class="skema-toggle">
                 <button
                     id="tab-1"
                     role="tab"

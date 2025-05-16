@@ -1,0 +1,28 @@
+.skema-toggle {
+    background-color: var(--dark-pink);
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+    display: inline-flex;
+    align-items: center;
+}
+
+.skema-toggle button {
+    background-color: var(--dark-pink);
+    color: var(--white);
+        border: none;
+    border-radius: 0.25rem;
+    padding: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    
+}
+
+.skema-toggle button[aria-selected="true"] {
+    background-color: var(--white);
+    color: var(--dark-pink);
+    font-weight: bold;
+
+    /* box-shadow: var(--shadow); */
+    font-size: 1rem;
+}
+
