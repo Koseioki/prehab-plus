@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import Notebook from './components/Notebook';
 import AppointmentComponent from './components/AppointmentComponent';
+import SkemaToggle from './components/SkemaToggle';
 function Skema() {
 
   //get appointments
@@ -35,6 +36,9 @@ function Skema() {
 
       <Notebook>
         <h1>Mit skema</h1>
+
+<SkemaToggle/>
+
         <hr aria-hidden="true" />
 
         <ul className="ul-no-style">
