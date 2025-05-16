@@ -4,8 +4,11 @@
     border-radius: 0.25rem;
     border: 0.0625rem solid var(--black);
     font-size: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    cursor: pointer;
 }
-/* button.back-button{
-    text-decoration: none;
-    color: var(--black);
-} */
+.back-button:hover{
+    background-color: var(--light-grey);
+    /* color: var(--white); */
+    /* box-shadow: var(--shadow); */
+}

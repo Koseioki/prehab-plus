@@ -17,6 +17,11 @@
 
 }
 
+.checkbox-button:hover{
+    filter:opacity(0.8);
+  
+}
+
 .todo-text-and-button{
     display: flex;
     justify-content: space-between;

@@ -7,7 +7,15 @@
     box-shadow: none;
     border: none;
     cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
 }
+
+.skema-toggle:hover,
+.skema-toggle:hover .tab-label-off {
+filter:opacity(0.8);
+}
+
 
 .tab-label-off {
     background-color: var(--dark-pink);
@@ -28,5 +36,6 @@
 
     font-size: 1rem;
     padding: 1rem;
+    box-shadow: var(--shadow);
 
 }
