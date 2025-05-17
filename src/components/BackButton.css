@@ -1,5 +1,6 @@
 .back-button{
     padding: 1rem;
+    color: var(--black);
     background-color: var(--white);
     border-radius: 0.25rem;
     border: 0.0625rem solid var(--black);

@@ -13,7 +13,7 @@
 
 .skema-toggle:hover,
 .skema-toggle:hover .tab-label-off {
-filter:opacity(0.8);
+    filter: saturate(0.8);
 }
 
 

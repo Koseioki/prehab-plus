@@ -54,10 +54,8 @@ function TodoComponent({ exercise }) {
             <NavLink
               to={`/${exercise.id}`}
               className="button button-blue"
-              aria-label={`Se vejledning af ${exercise.title}`}>
-              <span aria-label={`Se vejledning af ${exercise.title}`}>
+              aria-label={`Se vejledning i ${exercise.title}`}>
                 Se vejledning
-              </span>
             </NavLink>
           </div>
         </div>

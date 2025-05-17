@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './SkemaToggle.css';
+import SkemaListe from './SkemaListe';
+import Calendar from './Calendar';
 
 function SkemaToggle() {
     const [isList, setIsList] = useState(true);
@@ -36,9 +38,12 @@ function SkemaToggle() {
             >
                 {isList ? "Listevisning valgt" : "Kalendervisning valgt"}
             </div>
+                    <hr aria-hidden="true" />
+
             <div>
-                {isList ? "contents1" : "contents2"}
+                {isList ? <SkemaListe /> : <Calendar />}
             </div>
+            
         </>
     );
 }
