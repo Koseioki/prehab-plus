@@ -17,7 +17,9 @@ function ContactCard() {
                         <p>Din prehabilitation koordinerer</p>
                     </div>
                 </div>
+                <div className="paragraph">
                 <p>Har du spørgsmål til forløbet, øvelser eller praktiske forhold, kan du kontakte mig :-)</p>
+                </div>
                 <ul className="ul-no-style">
                     <li>
                         <a href="#" className="button button-yellow">

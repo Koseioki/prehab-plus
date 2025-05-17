@@ -60,6 +60,19 @@ h6 {
   margin: 0.5rem 0;
 }
 
+.heading {
+
+  margin: 1.5rem 0;
+}
+
+.paragraph{
+    margin: 1.5rem 0;
+}
+
+.section-width {
+  padding: 0 1rem;
+}
+
 p{
   margin: 0.5rem 0;
 }

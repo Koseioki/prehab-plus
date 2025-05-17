@@ -39,7 +39,7 @@ function Todo() {
       <Notebook>
         <h1>Min to-do liste</h1>
         <p>{danishDate}</p>
-        <h2>Hjemmetræning</h2>
+        <h2 className="heading">Hjemmetræning</h2>
         <hr aria-hidden="true" />
         <ul className="ul-no-style">
 
@@ -50,12 +50,7 @@ function Todo() {
             exercise={exercise}/>
         ))}
 
-          {/* <TodoComponent
-            title="Armløft med rotation"
-            duration="10" />
-          <TodoComponent
-            title="Armløft med rotation"
-            duration="10" /> */}
+
 
         </ul>
       </Notebook>
