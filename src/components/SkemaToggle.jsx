@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './SkemaToggle.css';
 import SkemaListe from './SkemaListe';
-import Calendar from './Calendar';
+import SkemaCalendar from './SkamaCalendar';
 
 function SkemaToggle() {
     const [isList, setIsList] = useState(true);
@@ -41,7 +41,7 @@ function SkemaToggle() {
                     <hr aria-hidden="true" />
 
             <div>
-                {isList ? <SkemaListe /> : <Calendar />}
+                {isList ? <SkemaListe /> : <SkemaCalendar />}
             </div>
             
         </>
