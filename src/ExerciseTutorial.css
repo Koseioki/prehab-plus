@@ -1,0 +1,49 @@
+.video-container {
+    position: relative;
+    background-image: url(./assets/video-sample.jpg);
+    width: 100%;
+    aspect-ratio: 16/9;
+    background-size: cover;
+    background-position: center;
+    max-width: 30rem;
+}
+
+.video-container::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    pointer-events: none;
+    z-index: 1; /* Overlay is behind content */
+}
+
+.video-container > div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2; /* Content is above overlay */
+}
+
+.video-container div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.video-container p {
+    color: var(--white);
+}
+
+.tutorial-image {
+    width: 12rem;
+    margin: 1rem 0;
+    height: auto;
+}
+
+.tutorial-text {
+    /* font-size: 1.2rem; */
+    margin: 1.5rem 0;
+}

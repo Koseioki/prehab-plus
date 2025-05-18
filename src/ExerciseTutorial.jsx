@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-// import './ExerciseTutorial.css';
+import './ExerciseTutorial.css';
 import Notebook from './components/Notebook';
 import BackButton from './components/BackButton';
 import useDocumentTitle from './hooks/useDocumentTitle';
 import { useRef } from 'react';
+import Error from './assets/error.svg';
+
 
 function ExerciseTutorial() {
 
@@ -35,24 +37,41 @@ function ExerciseTutorial() {
     }, []);
 
     return (
-        <main id="main-content">
+        <main id="main-content" className="content-width">
 
             <Notebook>
-                {/* title of the exercise */}
                 <BackButton />
                 <h1 ref={headingRef} tabIndex={-1} className="heading">{exercise.title}</h1>
                 <h2 className="heading">Video</h2>
+                <div className="video-container">
+                    <div>
+                    <img src={Error} alt="" />
+                    <p>Video ikke tilgængelig</p>
+                    </div>
+                </div>
 
-                <div>Video here</div>
 
                 <h2 className="heading">Sådan gør du:</h2>
                 {/* the first element of exercise.tutorial */}
 
                 <ol>
-                    {exercise.tutorial && exercise.tutorial.slice(0).map((step, index) => (
-                        <li key={index}>{step}</li>
+                    {exercise.tutorial && exercise.images && exercise.tutorial.map((step, index) => (
+                        <li className="tutorial-text" key={index}>
+                            <div>{step}</div>
+                            {exercise.images[index] && (
+                                <img src={exercise.images[index]} className="tutorial-image" alt="" />
+                            )}
+                        </li>
+                    ))}
+                    {/* Fallback if only tutorial or images exist */}
+                    {!exercise.images && exercise.tutorial && exercise.tutorial.map((step, index) => (
+                        <li className="tutorial-text" key={index}>{step}</li>
+                    ))}
+                    {!exercise.tutorial && exercise.images && exercise.images.map((img, index) => (
+                        <li className="tutorial-text" key={index}><img className="tutorial-image" src={img} alt="" /></li>
                     ))}
                 </ol>
+                <BackButton />
             </Notebook>
         </main>
 
