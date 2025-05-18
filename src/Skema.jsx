@@ -7,7 +7,7 @@ function Skema() {
 
   return (
 
-    <div id="main-content" className="content-width">
+    <main id="main-content" className="content-width">
 
       <Notebook>
         <h1>Mit skema</h1>
@@ -21,7 +21,7 @@ function Skema() {
 
 
 
-    </div>
+    </main>
   );
 }
 export default Skema;

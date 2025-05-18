@@ -28,7 +28,7 @@ function ExerciseTutorial() {
         useDocumentTitle(`${exercise.title || ''} - Prehab+`);
 
     return (
-        <div id="main-content">
+        <main id="main-content">
 
             <Notebook>
             {/* title of the exercise */}
@@ -47,7 +47,7 @@ function ExerciseTutorial() {
                 ))}
             </ol>
 </Notebook>
-        </div>
+        </main>
 
     );
 }

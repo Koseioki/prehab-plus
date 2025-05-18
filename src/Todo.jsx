@@ -35,7 +35,7 @@ function Todo() {
   }, []);
 
   return (
-    <div id="main-content" className="content-width">
+    <main id="main-content" className="content-width">
 
 
       <Notebook>
@@ -57,7 +57,7 @@ function Todo() {
         </ul>
       </Notebook>
 
-    </div>
+    </main>
   );
 }
 

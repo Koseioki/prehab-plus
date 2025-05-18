@@ -27,7 +27,7 @@ function AppointmentDetails() {
 
     useDocumentTitle(`${appointment.title || ''} - Prehab+`);
     return (
-        <div id="main-content" className="content-width">
+        <main id="main-content" className="content-width">
             <Notebook>
                 <BackButton />
                 <AppointmentComponent appointment={appointment} />
@@ -45,7 +45,7 @@ function AppointmentDetails() {
                 <h2>Spørgsmål?</h2>
                 <ContactCard />
             </div>
-        </div>
+        </main>
     );
 }
 export default AppointmentDetails;
