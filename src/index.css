@@ -58,6 +58,7 @@ h4,
 h5,
 h6 {
   margin: 0.5rem 0;
+  outline: none;
 }
 
 .heading {

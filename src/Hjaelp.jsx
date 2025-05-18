@@ -1,13 +1,17 @@
 import useDocumentTitle from './hooks/useDocumentTitle';
-
 import ContactCard from './components/ContactCard';
-import RingCard from './components/RingCard';
+import { useEffect, useRef } from 'react';
 function Hjaelp() {
     useDocumentTitle('Hjælp - Prehab+');
+      const headingRef = useRef(null);
+
+  useEffect(() => {
+    headingRef.current?.focus();
+  }, []);
     return (
 
         <main id="main-content" className="content-width section-width">
-            <h1 className="heading">Hjælp</h1>
+            <h1 ref={headingRef} tabIndex={-1} className="heading">Hjælp</h1>
             <div className="paragraph">
             <p>Vi arbejder på at samle de mest stillede spørgsmål og svar her.
             </p>

@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 // import './ExerciseTutorial.css';
-import Notebook  from './components/Notebook';
+import Notebook from './components/Notebook';
 import BackButton from './components/BackButton';
 import useDocumentTitle from './hooks/useDocumentTitle';
+import { useRef } from 'react';
 
 function ExerciseTutorial() {
 
@@ -25,28 +26,34 @@ function ExerciseTutorial() {
         getExercise();
     }, [exerciseId]);
 
-        useDocumentTitle(`${exercise.title || ''} - Prehab+`);
+    useDocumentTitle(`${exercise.title || ''} - Prehab+`);
+    // set focus on the heading
+    const headingRef = useRef(null);
+
+    useEffect(() => {
+        headingRef.current?.focus();
+    }, []);
 
     return (
         <main id="main-content">
 
             <Notebook>
-            {/* title of the exercise */}
-            <BackButton />
-            <h1>{exercise.title}</h1>
-            <h2>Video</h2>
+                {/* title of the exercise */}
+                <BackButton />
+                <h1 ref={headingRef} tabIndex={-1} className="heading">{exercise.title}</h1>
+                <h2 className="heading">Video</h2>
 
-            <div>Video here</div>
+                <div>Video here</div>
 
-            <h2>Sådan gør du:</h2>
-            {/* the first element of exercise.tutorial */}
-       
-            <ol>
-                {exercise.tutorial && exercise.tutorial.slice(0).map((step, index) => (
-                    <li key={index}>{step}</li>
-                ))}
-            </ol>
-</Notebook>
+                <h2 className="heading">Sådan gør du:</h2>
+                {/* the first element of exercise.tutorial */}
+
+                <ol>
+                    {exercise.tutorial && exercise.tutorial.slice(0).map((step, index) => (
+                        <li key={index}>{step}</li>
+                    ))}
+                </ol>
+            </Notebook>
         </main>
 
     );

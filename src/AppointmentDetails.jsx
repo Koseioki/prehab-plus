@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { useRef } from 'react';
 import BackButton from './components/BackButton';
 import Notebook from './components/Notebook';
 import AppointmentComponent from './components/AppointmentComponent';
@@ -26,13 +27,20 @@ function AppointmentDetails() {
     }, [appointmentId]);
 
     useDocumentTitle(`${appointment.title || ''} - Prehab+`);
+
+    const headingRef = useRef(null);
+    useEffect(() => {
+        headingRef.current?.focus();
+    }, []);
+
     return (
         <main id="main-content" className="content-width">
             <Notebook>
                 <BackButton />
+                <h1 ref={headingRef} tabIndex={-1} className="heading sr-only">{appointment.title}</h1>
                 <AppointmentComponent appointment={appointment} />
 
-                <h2>Om aftalen</h2>
+                <h2 className="heading">Om aftalen</h2>
 
                 {appointment.description && appointment.description.slice(0).map((description, index) => (
                     <p key={index}>{description}</p>
