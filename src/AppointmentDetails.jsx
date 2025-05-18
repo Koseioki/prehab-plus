@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useRef } from 'react';
@@ -26,6 +25,29 @@ function AppointmentDetails() {
         getAppointment();
     }, [appointmentId]);
 
+    // get staff members from firebase
+    const [staffMembers, setStaffMembers] = useState([]);
+    useEffect(() => {
+        async function getStaffMembers() {
+            const url = "https://prehab-plus-default-rtdb.firebaseio.com/staff.json";
+            const response = await fetch(url);
+            const data = await response.json();
+            const staffMembersArray = Object.keys(data).map((key) => ({
+                id: key,
+                ...data[key],
+            }));
+            setStaffMembers(staffMembersArray);
+            console.log(staffMembersArray);
+        }
+        getStaffMembers();
+    }
+        , []);
+
+    // Find the staff member related to this appointment
+    const staffMember = staffMembers.find(
+        (member) => member.id === appointment.staffId // adjust property name if needed
+    );
+
     useDocumentTitle(`${appointment.title || ''} - Prehab+`);
 
     const headingRef = useRef(null);
@@ -49,9 +71,12 @@ function AppointmentDetails() {
 
             </Notebook>
 
-            <div class="content-width">
-                <h2>Spørgsmål?</h2>
-                <ContactCard />
+            <div className="content-width">
+                <h2 className="heading">Spørgsmål?</h2>
+                <ul className="ul-no-style">
+
+                    {staffMember && <ContactCard staffMember={staffMember} />}
+                </ul>
             </div>
         </main>
     );

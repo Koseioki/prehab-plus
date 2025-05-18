@@ -44,16 +44,11 @@ function Todo() {
         <h2 className="heading">Hjemmetræning</h2>
         <hr aria-hidden="true" />
         <ul className="ul-no-style">
-
-
-        {exercises.map((exercise) => (
-          <TodoComponent
-            key={exercise.id}
-            exercise={exercise}/>
-        ))}
-
-
-
+          {exercises.map((exercise) => (
+            <TodoComponent
+              key={exercise.id}
+              exercise={exercise} />
+          ))}
         </ul>
       </Notebook>
 
