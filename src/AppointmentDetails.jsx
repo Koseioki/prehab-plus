@@ -5,6 +5,7 @@ import BackButton from './components/BackButton';
 import Notebook from './components/Notebook';
 import AppointmentComponent from './components/AppointmentComponent';
 import ContactCard from './components/ContactCard';
+import useDocumentTitle from './hooks/useDocumentTitle';
 
 function AppointmentDetails() {
 
@@ -24,6 +25,7 @@ function AppointmentDetails() {
         getAppointment();
     }, [appointmentId]);
 
+    useDocumentTitle(`${appointment.title || ''} - Prehab+`);
     return (
         <div id="main-content" className="content-width">
             <Notebook>

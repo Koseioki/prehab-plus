@@ -1,11 +1,12 @@
-
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 // import './ExerciseTutorial.css';
 import Notebook  from './components/Notebook';
 import BackButton from './components/BackButton';
+import useDocumentTitle from './hooks/useDocumentTitle';
 
 function ExerciseTutorial() {
+
 
     // import the exercise id from the url
     const { exerciseId } = useParams();
@@ -24,6 +25,7 @@ function ExerciseTutorial() {
         getExercise();
     }, [exerciseId]);
 
+        useDocumentTitle(`${exercise.title || ''} - Prehab+`);
 
     return (
         <div id="main-content">

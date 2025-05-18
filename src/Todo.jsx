@@ -2,9 +2,11 @@
 import Notebook from './components/Notebook';
 import TodoComponent from './components/TodoComponent';
 import { useEffect, useState } from 'react';
+import useDocumentTitle from './hooks/useDocumentTitle';
 
 
 function Todo() {
+  useDocumentTitle('Prehab+');
 
   // get the current danish date
   const date = new Date();

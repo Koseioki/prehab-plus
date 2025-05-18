@@ -1,7 +1,9 @@
+import useDocumentTitle from './hooks/useDocumentTitle';
 
 import Notebook from './components/Notebook';
 import SkemaToggle from './components/SkemaToggle';
 function Skema() {
+  useDocumentTitle('Mit skema - Prehab+');
 
   return (
 
