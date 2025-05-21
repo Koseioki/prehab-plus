@@ -14,54 +14,55 @@ function TodoComponent({ exercise }) {
   return (
     <>
 
-      <li className="todo-component-wrapper">
-
-        {/* title for screen readers */}
-        <h3 className="sr-only">{exercise.title}</h3>
-
-
-        {/* check box */}
-        <div>
-          <button
-            className="checkbox-button"
-            onClick={() => setChecked(!checked)}
-            aria-pressed={checked}
-          >
-            <img src={checked ? CheckboxChecked : Checkbox} alt="" />
-            <span className="sr-only">
-              {checked
-                ? `Markeret: ${exercise.title} er udført`
-                : `Marker ${exercise.title} som udført`}
-            </span>
-          </button>
-        </div>
+      <li>
+        <div className="todo-component-wrapper">
+          {/* title for screen readers */}
+          <h3 className="sr-only">{exercise.title}</h3>
 
 
-        <div className="todo-text-and-button">
-          {/* visual title */}
+          {/* check box */}
           <div>
-            <h3 aria-hidden="true" className="align-text-icon">
-              <img src={Training} alt="" className="text-icon" />
-              {exercise.title}
-            </h3>
-            <p className="align-text-icon">
-              <img src={Time} alt="" className="text-icon" />
-              {exercise.duration} minutter
-            </p>
+            <button
+              className="checkbox-button"
+              onClick={() => setChecked(!checked)}
+              aria-pressed={checked}
+            >
+              <img src={checked ? CheckboxChecked : Checkbox} alt="" />
+              <span className="sr-only">
+                {checked
+                  ? `Markeret: ${exercise.title} er udført`
+                  : `Marker ${exercise.title} som udført`}
+              </span>
+            </button>
           </div>
-          <div>
-            {/* button to exercise tutorial */}
-            <NavLink
-              to={`/${exercise.id}`}
-              className="button button-blue"
-              aria-label={`Se vejledning i ${exercise.title}`}>
+
+
+          <div className="todo-text-and-button">
+            {/* visual title */}
+            <div>
+              <h3 aria-hidden="true" className="align-text-icon">
+                <img src={Training} alt="" className="text-icon" />
+                {exercise.title}
+              </h3>
+              <p className="align-text-icon">
+                <img src={Time} alt="" className="text-icon" />
+                {exercise.duration} minutter
+              </p>
+            </div>
+            <div>
+              {/* button to exercise tutorial */}
+              <NavLink
+                to={`/${exercise.id}`}
+                className="button button-blue"
+                aria-label={`Se vejledning i ${exercise.title}`}>
                 Se vejledning
-            </NavLink>
+              </NavLink>
+            </div>
           </div>
         </div>
-
+        <hr aria-hidden="true" />
       </li>
-      <hr aria-hidden="true" />
+
     </>
   );
 }
