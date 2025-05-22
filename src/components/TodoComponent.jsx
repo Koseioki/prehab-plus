@@ -8,8 +8,23 @@ import Time from '../assets/time.svg';
 
 
 function TodoComponent({ exercise }) {
-  const [checked, setChecked] = useState(false);
+  const [checked, setChecked] = useState(!!exercise.done);
 
+  // Update the exercise.done value in Firebase
+  async function updateExerciseDone(newValue) {
+    const url = `https://prehab-plus-default-rtdb.firebaseio.com/exercises/${exercise.id}.json`;
+    await fetch(url, {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ done: newValue }),
+    });
+  }
+
+  const handleCheckboxClick = async () => {
+    const newChecked = !checked;
+    setChecked(newChecked);
+    await updateExerciseDone(newChecked);
+  };
 
   return (
     <>
@@ -24,7 +39,7 @@ function TodoComponent({ exercise }) {
           <div>
             <button
               className="checkbox-button"
-              onClick={() => setChecked(!checked)}
+              onClick={handleCheckboxClick}
               aria-pressed={checked}
             >
               <img src={checked ? CheckboxChecked : Checkbox} alt="" />
@@ -35,6 +50,7 @@ function TodoComponent({ exercise }) {
               </span>
             </button>
           </div>
+
 
 
           <div className="todo-text-and-button">

@@ -23,19 +23,10 @@ function SkemaToggle() {
                     aria-label="Skift visning"
                 >
                     <div className={isList ? "tab-label-on" : "tab-label-off"}>Liste</div>
-                    <div className={!isList ? "tab-label-on" : "tab-label-off"}>Kalendar</div>
+                    <div className={!isList ? "tab-label-on" : "tab-label-off"}>Kalender</div>
                 </button>
             </div>
-            <div
-                aria-live="polite"
-                style={{
-                    position: "absolute",
-                    left: "-9999px",
-                    width: "1px",
-                    height: "1px",
-                    overflow: "hidden"
-                }}
-            >
+            <div aria-live="polite" className="sr-only">
                 {isList ? "Listevisning valgt" : "Kalendervisning valgt"}
             </div>
                     <hr aria-hidden="true" />
