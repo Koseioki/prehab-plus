@@ -6,6 +6,8 @@ import BackButton from './components/BackButton';
 import useDocumentTitle from './hooks/useDocumentTitle';
 import { useRef } from 'react';
 import Error from './assets/error.svg';
+import Checkbox from './assets/checkbox.svg';
+import CheckboxChecked from './assets/checkbox-checked.svg';
 
 
 function ExerciseTutorial() {
@@ -35,6 +37,27 @@ function ExerciseTutorial() {
     useEffect(() => {
         headingRef.current?.focus();
     }, []);
+
+    const [checked, setChecked] = useState(!!exercise.done);
+
+    useEffect(() => {
+        setChecked(!!exercise.done);
+    }, [exercise.done]);
+
+    async function updateExerciseDone(newValue) {
+        const url = `https://prehab-plus-default-rtdb.firebaseio.com/exercises/${exercise.id}.json`;
+        await fetch(url, {
+            method: "PATCH",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ done: newValue }),
+        });
+    }
+
+    const handleCheckboxClick = async () => {
+        const newChecked = !checked;
+        setChecked(newChecked);
+        await updateExerciseDone(newChecked);
+    };
 
     return (
         <main id="main-content" className="content-width">
@@ -71,7 +94,26 @@ function ExerciseTutorial() {
                         <li className="tutorial-text" key={index}><img className="tutorial-image" src={img} alt="" /></li>
                     ))}
                 </ol>
+                <div className="checkbox-wrapper" onClick={handleCheckboxClick}
+                        aria-pressed={checked}>
+                    <button
+                        className="checkbox-button"
+                        onClick={handleCheckboxClick}
+                        aria-pressed={checked}
+                    >
+                        <img src={checked ? CheckboxChecked : Checkbox} alt="" />
+                        <span className="sr-only">
+                            {checked
+                                ? `Markeret: ${exercise.title} er udført`
+                                : `Marker ${exercise.title} som udført`}
+                        </span>
+                    </button>
+    
+                    <p>Jeg er færdig med øvelsen</p>
+                </div>
                 <BackButton />
+
+                {/*  */}
             </Notebook>
         </main>
 

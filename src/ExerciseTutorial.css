@@ -47,3 +47,18 @@
     /* font-size: 1.2rem; */
     margin: 1.5rem 0;
 }
+
+.checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.checkbox-wrapper p {
+    font-weight: bold;
+}
+
+.checkbox-wrapper:hover p{
+    text-decoration: underline;
+}
