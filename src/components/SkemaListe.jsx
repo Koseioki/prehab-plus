@@ -12,6 +12,8 @@ function SkemaListe() {
                 id: key,
                 ...data[key],
             }));
+            // Sort by date (ascending)
+            appointmentsArray.sort((a, b) => new Date(a.date) - new Date(b.date));
             setAppointments(appointmentsArray);
             console.log(appointmentsArray);
         }
@@ -23,10 +25,12 @@ function SkemaListe() {
 
             <ul className="ul-no-style">
                 {appointments.map((appointment) => (
-                    <AppointmentComponent
-                        key={appointment.id}
-                        appointment={appointment} />
-                ))}    </ul>
+                    <li key={appointment.id}>
+                        <AppointmentComponent
+                            appointment={appointment} />
+                    </li>
+                ))}
+            </ul>
         </>
     );
 }

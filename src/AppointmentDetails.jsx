@@ -60,12 +60,12 @@ function AppointmentDetails() {
             <Notebook>
                 <BackButton />
                 <h1 ref={headingRef} tabIndex={-1} className="heading sr-only">{appointment.title}</h1>
-                <AppointmentComponent appointment={appointment} />
+                <AppointmentComponent appointment={appointment} detailPage="true" />
 
                 <h2 className="heading">Om aftalen</h2>
 
                 {appointment.description && appointment.description.slice(0).map((description, index) => (
-                    <p key={index}>{description}</p>
+                    <p className="paragraph" key={index}>{description}</p>
                 ))}
 
 

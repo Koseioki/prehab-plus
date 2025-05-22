@@ -105,7 +105,7 @@ function ExerciseTutorial() {
                         <span className="sr-only">
                             {checked
                                 ? `Markeret: ${exercise.title} er udført`
-                                : `Marker ${exercise.title} som udført`}
+                                : `Markér ${exercise.title} som udført`}
                         </span>
                     </button>
     
