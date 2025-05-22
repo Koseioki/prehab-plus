@@ -60,7 +60,11 @@
     font-weight: bold;
 }
 
+.checkbox-wrapper:hover {
+    cursor: pointer;
+}
+
 .checkbox-wrapper:hover p{
     text-decoration: underline;
-    cursor: pointer;
+
 }
