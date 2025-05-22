@@ -62,4 +62,5 @@
 
 .checkbox-wrapper:hover p{
     text-decoration: underline;
+    cursor: pointer;
 }
