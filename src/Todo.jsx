@@ -34,6 +34,8 @@ function Todo() {
     getExercises();
   }, []);
 
+  
+
   return (
     <main id="main-content" className="content-width">
 
