@@ -30,8 +30,7 @@ function TodoComponent({ exercise }) {
     <>
 
       <li>
-        <div className="todo-component-wrapper"               onClick={handleCheckboxClick}
-              aria-pressed={checked}>
+        <div className="todo-component-wrapper" >
           {/* title for screen readers */}
           <h3 className="sr-only">{exercise.title}</h3>
 
@@ -56,7 +55,9 @@ function TodoComponent({ exercise }) {
 
           <div className="todo-text-and-button">
             {/* visual title */}
-            <div>
+            <div
+              onClick={handleCheckboxClick}
+              aria-pressed={checked}>
               <h3 aria-hidden="true" className="align-text-icon">
                 <img src={Training} alt="" className="text-icon" />
                 {exercise.title}

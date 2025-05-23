@@ -7,13 +7,13 @@
     margin: 2rem 0;
 }
 
-.todo-component-wrapper:hover{
+.todo-text-and-button div:hover{
     /* filter:opacity(0.8); */
     cursor: pointer;
     text-decoration: underline;
 }
 
-.todo-component-wrapper[aria-pressed="true"]{
+.todo-text-and-button div[aria-pressed="true"]{
     /* filter:opacity(0.8); */
     text-decoration: line-through;
     color: var(--dark-grey);
